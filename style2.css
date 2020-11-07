@@ -21,6 +21,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    min-width: 280px;
+}
+
 
 /* clear-fix */
 
@@ -43,10 +47,12 @@ html {
 header {
     display: block;
     height: 100vh;
+    min-height: 450px;
     background-image: linear-gradient(rgba(73, 73, 72, 1), rgba(73, 73, 72, 0.3)), url('./Images/cover.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    z-index: 999;
 }
 
 .header {
@@ -290,14 +296,27 @@ sec-title {
 }
 
 .sec-title {
-    color: #494848;
+    color: var(--main-color);
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.sec-title::before,
+.sec-title::after {
+    display: inline-block;
+    margin: 1rem;
+    vertical-align: middle;
+    content: "";
+    height: 2px;
+    width: 10%;
+    background-color: var(--main-color);
 }
 
 
 /* -------------Projects-------- */
 
 section {
-    padding: 1rem;
+    padding: 3rem 1rem;
     display: flex;
     flex-wrap: wrap;
 }
@@ -307,10 +326,32 @@ section {
     width: 100%;
     justify-content: center;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .title-container {
     width: 70%;
+}
+
+.container-project {
+    padding: 0.3rem;
+    width: 100%;
+}
+
+.container-project div {
+    padding: 1rem;
+    background-color: #2e2929;
+}
+
+.container-project div img {
+    width: 100%;
+    opacity: 0.3;
+}
+
+.container-project div img:hover {
+    transition: 0.5s all ease;
+    opacity: 1;
+    transform: scale(1.2);
 }
 
 @media only screen and (max-width:1680px) {
@@ -327,6 +368,9 @@ section {
     }
     li a {
         font-size: 1.5rem;
+    }
+    .projects .col-3 {
+        width: 50%;
     }
 }
 
@@ -371,5 +415,11 @@ section {
 @media only screen and (max-width:768px) {
     .container-buttons {
         width: 90%;
+    }
+    .title-container {
+        width: 100%;
+    }
+    .projects .col-3 {
+        width: 100%;
     }
 }
