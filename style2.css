@@ -52,7 +52,6 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    z-index: 999;
 }
 
 .header {
@@ -62,6 +61,8 @@ header {
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 1;
+    opacity: 1;
 }
 
 .nav-burger {
@@ -350,7 +351,7 @@ section {
 
 .container-project div img:hover {
     transition: 0.5s all ease;
-    opacity: 1;
+    opacity: 0.99;
     transform: scale(1.2);
 }
 
