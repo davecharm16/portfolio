@@ -335,13 +335,18 @@ section {
 }
 
 .container-project {
+    display: flex;
     padding: 0.3rem;
     width: 100%;
+    z-index: -1;
+    overflow: hidden;
 }
 
 .container-project div {
     padding: 1rem;
     background-color: #2e2929;
+    position: relative;
+    justify-content: flex-start;
 }
 
 .container-project div img {
@@ -353,6 +358,23 @@ section {
     transition: 0.5s all ease;
     opacity: 0.99;
     transform: scale(1.2);
+}
+
+.description-back {
+    display: none;
+    height: auto;
+}
+
+div>.caption {
+    /* display: none; */
+    background-color: rgba(73, 73, 72, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 70%;
+    opacity: 0;
 }
 
 @media only screen and (max-width:1680px) {
