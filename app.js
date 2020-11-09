@@ -91,5 +91,6 @@ function carousel() {
     div_image.firstElementChild.style.transform = 'translateX(-110%)';
     div_image.firstElementChild.style.transition = '1s all ease-in-out';
     div_image.lastElementChild.style.transition = '2s all ease-in-out';
-    div_image.lastElementChild.style.opacity = 0.99;
+    div_image.lastElementChild.style.opacity = '0.99';
+    div_image.lastElementChild.style.setProperty('z-index', 'initial');
 }
