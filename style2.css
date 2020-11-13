@@ -261,6 +261,7 @@ span {
 }
 
 .col-3 {
+    transition: 1s all ease;
     display: inline-table;
     width: 33.19%;
 }
@@ -340,6 +341,7 @@ section {
     width: 100%;
     z-index: -1;
     overflow: hidden;
+    transition: all 0.5s ease;
 }
 
 .container-project div {
@@ -347,6 +349,7 @@ section {
     background-color: #2e2929;
     position: relative;
     justify-content: flex-start;
+    cursor: pointer;
 }
 
 .container-project div img {
@@ -365,6 +368,18 @@ section {
     height: auto;
 }
 
+.animate_carousel {
+    transition: all 1s ease;
+    transform: translateX(-110%);
+}
+
+.animate_caption {
+    display: block;
+    transition: all 2s ease;
+    opacity: 0.99;
+    z-index: 1;
+}
+
 div>.caption {
     /* display: none; */
     background-color: rgba(73, 73, 72, 0.3);
@@ -376,10 +391,39 @@ div>.caption {
     height: 70%;
     z-index: -1;
     opacity: 0;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+.message {
+    font-weight: 300;
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    line-height: 130%;
+    overflow: auto;
 }
 
 .on-top {
     z-index: 99;
+}
+
+.caption h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 120%;
+    letter-spacing: 2px;
+}
+
+#animate_carousel {
+    transition: all 1s ease;
+    transform: translateX(-110%);
+}
+
+#animate_caption {
+    transition: all 2s ease;
+    opacity: 0.99;
+    z-index: initial;
 }
 
 @media only screen and (max-width:1680px) {

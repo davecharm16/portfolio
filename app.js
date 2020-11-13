@@ -1,14 +1,13 @@
-// console.log("Helloo..");
-//Event Listeners
-
-
 //query selectors
 const hero_text = document.querySelector('.hero-text');
 const text = "Hello, I am Dave Charm";
 const nav_button = document.querySelectorAll(".nav-burger");
 const drop_down = document.querySelector(".drop_down");
 let i = 0;
+
+
 const project_image = document.querySelectorAll(".container-project");
+const caption = document.querySelectorAll('.caption');
 
 var arr = text.split("");
 arr.forEach(letters => {
@@ -43,14 +42,15 @@ function complete() {
 }
 
 
-
 /*event listener*/
 
 nav_button[0].addEventListener("click", drop_close);
 nav_button[1].addEventListener("click", drop);
 project_image.forEach(element => {
-    element.addEventListener('click', carousel);
+    element.addEventListener('click', carousel, false);
 });
+
+
 
 console.log(nav_button);
 /*nav -funct */
@@ -80,17 +80,38 @@ function drop_close() {
 
 // }
 
-//test carousel//
+// Carousel 
 
 
 
 function carousel() {
     // const image = this.firstElementChild.firstElementChild;
     const div_image = this.firstElementChild;
-    div_image.style.transform = '0.5 all ease';
-    div_image.firstElementChild.style.transform = 'translateX(-110%)';
-    div_image.firstElementChild.style.transition = '1s all ease-in-out';
-    div_image.lastElementChild.style.transition = '2s all ease-in-out';
-    div_image.lastElementChild.style.opacity = '0.99';
-    div_image.lastElementChild.style.setProperty('z-index', 'initial');
+    // div_image.style.transform = '0.5 all ease';
+    // div_image.firstElementChild.style.transform = 'translateX(-110%)';
+    // div_image.firstElementChild.style.transition = '1s all ease-in-out';
+    // div_image.lastElementChild.style.transition = '2s all ease-in-out';
+    // div_image.lastElementChild.style.opacity = '0.99';
+    // div_image.lastElementChild.style.setProperty('z-index', 'initial');
+    // console.log(div_image.firstElementChild)
+    div_image.firstElementChild.id = "animate_carousel";
+    div_image.lastElementChild.id = "animate_caption";
+
+    let t = setInterval(() => {
+            const div_image = this.firstElementChild;
+            div_image.firstElementChild.id = "";
+            div_image.lastElementChild.id = "";
+            clearInterval(t);
+        },
+        10000
+    );
+    div_image.lastElementChild.addEventListener("click", () => {
+        let x = setInterval(() => {
+                const div_image = this.firstElementChild;
+                div_image.firstElementChild.id = "";
+                div_image.lastElementChild.id = "";
+                clearInterval(x);
+            },
+            100)
+    }, false);
 }
