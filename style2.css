@@ -427,7 +427,7 @@ div>.caption {
     position: relative;
     width: 100%;
     height: 100vh;
-    min-height: 730px;
+    min-height: 900px;
 }
 
 .container-flex {
@@ -600,6 +600,182 @@ div>.caption {
     z-index: initial;
 }
 
+
+/*-------Contacts--------------*/
+
+.section-contact {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    min-height: 800px;
+    background-image: linear-gradient(rgba(73, 73, 72, 0.7), rgba(73, 73, 72, 0.5)), url(./Images/contactbg2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contact-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-text h2 {
+    font-weight: 300;
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
+    text-shadow: #2e2929;
+    text-align: center;
+}
+
+.contact-box {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+}
+
+.box-1 {
+    /* position: absolute; */
+    margin: 0 2rem;
+    display: flex;
+    height: 100%;
+    width: 35%;
+    background-image: linear-gradient(rgba(73, 73, 72, 0.3), rgba(73, 73, 72, 0.3));
+    box-shadow: 7px 10px 15px 1px black;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.box-2 {
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+    padding: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/*--Form --*/
+
+.box-2 form {
+    height: 100%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+
+input[type=text],
+input[type=email] {
+    outline: none;
+    border: none;
+    height: 10%;
+    border-bottom: 2px solid var(--main-color);
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 1.3rem;
+    color: var(--main-color);
+}
+
+input[type=submit] {
+    font-size: 1.5rem;
+    border: none;
+    height: 10%;
+    width: 50%;
+    color: white;
+    background-color: #349eeb;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/*---------*/
+
+.box-2 form h2 {
+    color: var(--main-color);
+}
+
+.pin {
+    font-size: 1.5rem;
+    position: absolute;
+    color: gray;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.font-border {
+    position: relative;
+    border-radius: 50%;
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+.desc {
+    width: calc(100% - 70px);
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    color: var(--t-color);
+}
+
+.head {
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    align-items: center;
+}
+
+.desc-text {
+    display: block;
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.soc-med {
+    padding: 0.3rem;
+    font-weight: 400;
+}
+
+.soc-med a {
+    text-decoration: none;
+}
+
+.fb {
+    background-color: #4267B2;
+}
+
+.lk {
+    background-color: #0e76a8;
+}
+
+.ig {
+    background-color: #E1306C;
+}
+
+.soc-med span {
+    font-weight: 600;
+    opacity: 1;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin-right: 2px;
+}
+
 @media only screen and (max-width:1680px) {
     .box {
         --hwt: 500px;
@@ -645,9 +821,25 @@ div>.caption {
         color: var(--main-color);
         font-size: 1.3rem;
     }
+    .font-border {
+        height: 30px;
+        width: 30px;
+    }
+    .desc {
+        font-size: 1.3rem;
+    }
+    input[type=submit] {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width:1024px) {
+    .box-1 {
+        width: 100%;
+    }
+    .box-2 {
+        display: none;
+    }
     .hero-img {
         display: none;
     }
