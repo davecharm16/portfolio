@@ -492,7 +492,7 @@ div>.caption {
 }
 
 .box-t {
-    background-image: url('/Images/ABOUT.PNG');
+    background-image: url('./Images/ABOUT.PNG');
     background-size: cover;
     height: calc(var(--hwt) - 110px);
     width: calc(var(--hwt) - 110px);
