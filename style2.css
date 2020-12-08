@@ -776,6 +776,85 @@ input[type=submit] {
     margin-right: 2px;
 }
 
+
+/*-----Skillsss------*/
+
+.skill-title {
+    color: var(--main-color);
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.skills-head {
+    height: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-skills {
+    display: grid;
+    width: 100%;
+    min-height: calc(100vh - 7rem);
+    grid-template-columns: repeat( auto-fit, minmax(280px, 1fr));
+    grid-gap: 2rem;
+}
+
+.card {
+    position: relative;
+    min-height: 450px;
+}
+
+.desc-skill {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.desc-skill h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.boxes {
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1rem;
+    color: var(--main-color);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.skill-boxes {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-gap: 1rem;
+}
+
+.block-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(73, 73, 72, 0.5);
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
 @media only screen and (max-width:1680px) {
     .box {
         --hwt: 500px;
